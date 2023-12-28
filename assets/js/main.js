@@ -1,26 +1,20 @@
-function swap() {
+const addition = () => {
 
-    // Take input from the user
-    let a = parseInt(document.getElementById("valueOne").value);
-    let b = parseInt(document.getElementById("valueTwo").value);
+    // Get first value from input
+    let firstValue = Number(document.getElementById("firstValue").value);
 
-    // Before the Variable 1 & Variable 2 swap
-    console.log(`Before Swap: Variable 1 = ${a}, Variable 2 = ${b}`);
+    // Get second value from input
+    let secondValue = Number(document.getElementById("secondValue").value);
 
-    document.querySelector("#p1").innerHTML = `Before Swap: Variable 1 = ${a}, Variable 2 = ${b}`;
+    // Operation Perform
+    let addition = firstValue + secondValue;
 
-    // Create a temporary variable
-    let temp;
+    addition = `The sum of ${firstValue} and ${secondValue} is : ${addition}`;
 
-    // Swap variables
-    temp = a;
-    a = b;
-    b = temp;
+    console.log(addition);
 
+    document.querySelector("#h4").innerHTML = addition;
 
-    // After the Variable 1 & Variable 2 swap
-    console.log(`After Swap: Variable 1 = ${a}, Variable 2 = ${b}`);
-
-    document.querySelector("#p2").innerHTML = `After Swap: Variable 1 = ${a}, Variable 2 = ${b}`;
-
+    return;
 }
+
