@@ -1,19 +1,16 @@
-const addition = () => {
+const convertKmToMiles = () => {
 
-    // Get first value from input
-    let firstValue = Number(document.getElementById("firstValue").value);
-
-    // Get second value from input
-    let secondValue = Number(document.getElementById("secondValue").value);
+    // Get KM value from input
+    let kmValue = Number(document.getElementById("kmValue").value);
 
     // Operation Perform
-    let addition = firstValue + secondValue;
+    let milesValue = (kmValue * 0.621371).toFixed(3);
 
-    addition = `The sum of ${firstValue} and ${secondValue} is : ${addition}`;
+    milesValue = `${kmValue} kilometers is approximately ${milesValue} miles.`;
 
-    console.log(addition);
+    console.log(milesValue);
 
-    document.querySelector("#h4").innerHTML = addition;
+    document.querySelector("#h4").innerHTML = milesValue;
 
     return;
 }
